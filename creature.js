@@ -48,17 +48,9 @@ class Creature {
      * right, or infect is executed.  Prior to that, the creature may execute one or
      * several instructions.
      * 
-     * You can access the instructions for the species of this creature via: 
-     * this.species.programStep() (see species.js).
-     * expect to be long
      */
     takeOneTurn() {
-        // do until right left infect hop
-        //location and direction are important
-        /*turn, this.direction = Geometry.leftFrom(this.direction); might have to make more than 1 line*/
-        /*hop see what is infront of creature, if is creature/wall/ obstacle wont move, otherwise move
-        
-        use species object to get the code and world to see what is infront etc*/
+
         let keywords = ["hop", "left", "right", "infect"];
         
         for(let i = 0; i < this.species.code.length; i++ ){

@@ -27,8 +27,6 @@ class Species {
      * @param {string} code a string containing the program code for this Species. 
      */
     constructor( code ) {
-        // TODO : parse code and store in this.code as described above.  Also, store
-        // the color for this species in this.color.
         let tempCode = code.trim().split(/\r?\n/);
         this.code = [];
         //two indents in a row

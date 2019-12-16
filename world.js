@@ -36,9 +36,6 @@ class World {
     loadSpecies() {
         let speciesElements = document.activeElement.getElementsByClassName('species-data');
         
-        // TODO: iterate through each item in speciesElements (it is an "array-like" object), 
-        //    create a Species object for each.  The contents of each element in the array
-        //    is available vial speciesElements[i].text
         for(let i = 0; i < speciesElements.length; i++){
             let spec = new Species(speciesElements[i].text);
             this.species.push(spec);
@@ -49,7 +46,7 @@ class World {
      * Create a random set of creatures with random positions and orientations.
      */
     populate() {
-        // TODO: Implement this method, change species too
+        
         for(let i = 0; i < 40;i++){
             let tempCols = Math.floor(Math.random() * this.columns);
             let tempRows = Math.floor(Math.random() * this.rows);
@@ -68,8 +65,6 @@ class World {
      * forEach method:  this.creatures.forEach(..).
      */
     step() {
-        // TODO: Implement this method.
-        //world has array of creatures
         this.creatures.forEach(function(being){
             being.takeOneTurn();
         });
@@ -86,7 +81,6 @@ class World {
      *     at that location.
      */
     getContents( row, col ) {
-        // TODO: implement this method
         
         let foundCreature = this.creatures.find(function(being){
             let tempPoint = being.getLocation();
@@ -129,7 +123,6 @@ class World {
      * @return {Boolean} true if point is a valid location in this World.
      */
     inRange( point ) {
-        // TODO: Implement this method.
         if(point.row > this.getRows()-1){
             return false;
         }
